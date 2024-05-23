@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import { navbarItemsNotLoggedIn } from "@/data/navbarItemsNotLoggedIn";
+import { navbarItemsNotLoggedIn } from "../../../data/navbarItemsNotLoggedIn";
 
 const Navbar = () => {
   return (

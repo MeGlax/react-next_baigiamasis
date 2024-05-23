@@ -1,13 +1,12 @@
-import Header from "@/components/organisms/Header/Header";
-import PostsWrapper from "@/components/organisms/PostsWrapper/PostsWrapper";
-
+import Header from "../components/organisms/Header/Header";
+import CardsWrapper from "../components/organisms/CardsWrapper/CardsWrapper";
 export default function Home() {
   return (
     <div>
       <Header />
       <br />
       <br />
-      <PostsWrapper />
+      <CardsWrapper />
     </div>
   );
 }
