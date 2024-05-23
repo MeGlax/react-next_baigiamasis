@@ -9,7 +9,6 @@ const CardsWrapper = () => {
     try {
       const response = await axios.get(`${process.env.SERVER_URL}/questions`);
       setQuestions(response.data.questions);
-      console.log(questions);
     } catch (err) {
       console.log("error:", err);
     }

@@ -3,3 +3,6 @@
   display: flex;
   gap: 1rem;
 }
+.main ul li {
+  cursor: pointer;
+}
