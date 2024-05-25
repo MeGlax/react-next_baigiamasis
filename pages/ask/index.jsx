@@ -1,12 +1,11 @@
 import QuestionForm from "../../components/molecules/QuestionForm/QuestionForm";
-import Header from "../../components/organisms/Header/Header";
+import MainTemplate from "../../components/templates/MainTemplate/MainTemplate";
 
 const index = () => {
   return (
-    <div>
-      <Header />
+    <MainTemplate>
       <QuestionForm />
-    </div>
+    </MainTemplate>
   );
 };
 

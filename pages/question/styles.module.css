@@ -1,0 +1,24 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.questionWrapper {
+  border: 1px solid black;
+  font-size: 24px;
+}
+.questionDetailsWrapper {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 1rem;
+}
+.answersWrapper {
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

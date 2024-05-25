@@ -1,5 +1,6 @@
+import MainTemplate from "../../components/templates/MainTemplate/MainTemplate";
 const index = () => {
-  return <div>register</div>;
+  return <MainTemplate>register</MainTemplate>;
 };
 
 export default index;

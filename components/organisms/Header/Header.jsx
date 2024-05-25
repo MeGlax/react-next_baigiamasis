@@ -21,15 +21,15 @@ const Header = () => {
         setUserSignedIn(true);
       }
     } catch (err) {
-      console.log("error:", err);
+      cookies.remove("user_id");
     }
   };
   useEffect(() => {
     validateToken();
   }, [cookies.get("jwt_token")]);
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
+    <header className={styles.wrapper}>
+      <div className={styles.main}>
         <Logo />
         <Navbar isLoggedIn={isUserSignedIn} />
       </div>

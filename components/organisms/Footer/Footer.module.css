@@ -1,0 +1,11 @@
+.wrapper {
+  background-color: lightblue;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  max-width: 1200px;
+  margin: auto;
+}

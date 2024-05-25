@@ -1,13 +1,12 @@
 import React from "react";
-import Header from "../../components/organisms/Header/Header";
 import LoginForm from "../../components/molecules/LoginForm/LoginForm";
+import MainTemplate from "../../components/templates/MainTemplate/MainTemplate";
 
 const index = () => {
   return (
-    <div>
-      <Header />
+    <MainTemplate>
       <LoginForm />
-    </div>
+    </MainTemplate>
   );
 };
 export default index;

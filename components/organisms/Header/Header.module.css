@@ -1,7 +1,8 @@
-.header {
+.wrapper {
   background-color: yellow;
+  margin-bottom: 1.5rem;
 }
-.container {
+.main {
   background-color: grey;
   margin: auto;
   max-width: 1200px;

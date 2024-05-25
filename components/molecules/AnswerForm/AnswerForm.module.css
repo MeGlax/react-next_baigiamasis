@@ -1,0 +1,18 @@
+.replyWrapper {
+  border: 1px solid black;
+  gap: 10px;
+  padding: 10px 5px;
+  display: flex;
+}
+.replyLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.replyRight {
+  width: 100%;
+}
+.replyRight textarea {
+  resize: none;
+  width: 100%;
+}

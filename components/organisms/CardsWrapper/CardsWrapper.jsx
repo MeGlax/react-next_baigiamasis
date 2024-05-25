@@ -27,6 +27,7 @@ const CardsWrapper = () => {
               date={question.date}
               answersAmount={question.answers.length}
               asker_id={question.user_id}
+              question_id={question.id}
             />
           );
         })}
