@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { navbarItems } from "../../../data/navbarItems";
 import cookie from "js-cookie";
+import { getUsernameById } from "../../../api/user";
+import { useEffect } from "react";
 
 const Navbar = ({ isLoggedIn }) => {
+  const [username, setUsername] = useState();
   const logout = () => {
     cookie.remove("jwt_token");
     window.location.reload();
   };
+  useEffect(() => {
+    const fetchUsername = async () => {
+      const fetchedUsername = await getUsernameById(cookie.get("user_id"));
+      setUsername(fetchedUsername);
+    };
+    fetchUsername();
+  }, []);
   return (
     <nav className={styles.main}>
       <ul>
@@ -19,13 +29,16 @@ const Navbar = ({ isLoggedIn }) => {
           );
         })}
         {isLoggedIn ? (
-          <li
-            onClick={() => {
-              logout();
-            }}
-          >
-            Log Out
-          </li>
+          <>
+            <li>{username}</li>
+            <li
+              onClick={() => {
+                logout();
+              }}
+            >
+              Log Out
+            </li>
+          </>
         ) : (
           <>
             <li>

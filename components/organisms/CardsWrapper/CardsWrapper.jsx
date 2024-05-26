@@ -15,7 +15,11 @@ const CardsWrapper = () => {
   };
   useEffect(() => {
     fetchQuestions();
-  }, []);
+  }, [questions]);
+  const refreshQuestions = async () => {
+    console.log("heelo");
+    await fetchQuestions();
+  };
   return (
     <div className={styles.main}>
       {questions &&
@@ -23,6 +27,7 @@ const CardsWrapper = () => {
           return (
             <Card
               key={question.id}
+              refreshQuestions={refreshQuestions}
               title={question.question_text}
               date={question.date}
               answersAmount={question.answers.length}

@@ -63,7 +63,12 @@ const LoginForm = () => {
           setPassword(event.target.value);
         }}
       />
-      <Button onClick={onLogin} label={"login"} />
+      <Button
+        onPushed={() => {
+          onLogin();
+        }}
+        label={"login"}
+      />
       {isLoading && <Spinner />}
       {isError && <div className={styles.error}>Please fill in all fields</div>}
       {isBadData && (

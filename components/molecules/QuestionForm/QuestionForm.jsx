@@ -45,7 +45,7 @@ const QuestionForm = () => {
       />
       <Button
         label="submit"
-        onClick={() => {
+        onPushed={() => {
           createQuestion();
         }}
       />

@@ -6,6 +6,8 @@ import upVoteActiveImage from "../../../assets/upVoteActive.svg";
 import upVotePassiveImage from "../../../assets/upVotePassive.svg";
 import { likeUnlikeAnswer } from "../../../api/question";
 import deleteImg from "../../../assets/delete.svg";
+import { deleteAnswer } from "../../../api/question";
+import Modal from "../../../Modal/Modal";
 
 const AnswerCard = ({
   user_id,
@@ -19,7 +21,17 @@ const AnswerCard = ({
   const [username, setUsername] = useState("anonymous");
   const [isAnswerLiked, setAnswerLiked] = useState(false);
   const isAnswerYours = user_id === cookies.get("user_id") ? true : false;
+  const [isWarningShown, setWarningShown] = useState(false);
 
+  const delete_answer = async () => {
+    const jwt_token = cookies.get("jwt_token");
+    try {
+      await deleteAnswer({ jwt_token, question_id, answer_id });
+      refreshAnswers();
+    } catch (err) {
+      console.log("there was a problem deleting the answer");
+    }
+  };
   const likeUnlike = async () => {
     const jwt_token = cookies.get("jwt_token");
     try {
@@ -49,7 +61,13 @@ const AnswerCard = ({
         <p>
           {`${username}: `}
           {isAnswerYours && (
-            <img src={deleteImg.src} className={styles.deleteImg} />
+            <img
+              src={deleteImg.src}
+              className={styles.deleteImg}
+              onClick={() => {
+                setWarningShown(true);
+              }}
+            />
           )}
         </p>
         <p>{answer}</p>
@@ -67,6 +85,17 @@ const AnswerCard = ({
           />
         </div>
       </div>
+      {isWarningShown && (
+        <Modal
+          message={"Are you sure you want to delete this"}
+          onCancel={() => {
+            setWarningShown(false);
+          }}
+          onConfirm={() => {
+            delete_answer();
+          }}
+        />
+      )}
     </div>
   );
 };

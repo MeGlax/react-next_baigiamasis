@@ -20,7 +20,12 @@ const AnswerForm = ({ question_id, refreshAnswers }) => {
     <div className={styles.replyWrapper}>
       <div className={styles.replyLeft}>
         <p>reply:</p>
-        <Button onClick={submitAnswer} label={"post"} />
+        <Button
+          onPushed={() => {
+            submitAnswer();
+          }}
+          label={"post"}
+        />
       </div>
       <div className={styles.replyRight}>
         <textarea

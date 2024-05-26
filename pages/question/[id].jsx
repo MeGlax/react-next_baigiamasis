@@ -13,7 +13,7 @@ const Index = () => {
   const router = useRouter();
   const [question, setQuestion] = useState();
   const [username, setUsername] = useState("uknown");
-  const [questionDate, setQuestiondate] = useState();
+  const [questionDate, setQuestionDate] = useState();
   const question_id = router.query.id;
   const headers = {
     authorization: cookies.get("jwt_token"),
@@ -22,7 +22,7 @@ const Index = () => {
     if (question) {
       const questionDateArr = question.date.split(" ");
       const newQuestionDate = `${questionDateArr[1]} ${questionDateArr[2]}, ${questionDateArr[3]}`;
-      setQuestiondate(newQuestionDate);
+      setQuestionDate(newQuestionDate);
       const fetchUsername = async () => {
         const fetchedUsername = await getUsernameById(question.user_id);
         setUsername(fetchedUsername);
