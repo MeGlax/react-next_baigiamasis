@@ -30,7 +30,7 @@ const Navbar = ({ isLoggedIn }) => {
         })}
         {isLoggedIn ? (
           <>
-            <li>{username}</li>
+            <li className={styles.user}>{username}</li>
             <li
               onClick={() => {
                 logout();

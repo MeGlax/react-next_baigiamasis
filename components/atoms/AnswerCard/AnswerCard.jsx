@@ -7,7 +7,7 @@ import upVotePassiveImage from "../../../assets/upVotePassive.svg";
 import { likeUnlikeAnswer } from "../../../api/question";
 import deleteImg from "../../../assets/delete.svg";
 import { deleteAnswer } from "../../../api/question";
-import Modal from "../../../Modal/Modal";
+import Modal from "../../molecules/Modal/Modal";
 
 const AnswerCard = ({
   user_id,

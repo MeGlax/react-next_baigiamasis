@@ -6,3 +6,7 @@
 .main ul li {
   cursor: pointer;
 }
+.user {
+  color: var(--background-color);
+  cursor: default !important;
+}

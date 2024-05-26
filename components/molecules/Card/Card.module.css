@@ -1,8 +1,10 @@
 .main {
-  background-color: pink;
+  background-color: var(--background-color);
   padding: 10px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
