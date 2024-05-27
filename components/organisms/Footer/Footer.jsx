@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.main}>
-        <p>all rights reserved ©pliurpalinis</p>
+        <p>all rights reserved ©Pliurpalinis</p>
       </div>
     </div>
   );
