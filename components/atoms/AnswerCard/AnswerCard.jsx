@@ -58,7 +58,7 @@ const AnswerCard = ({
   return (
     <div className={styles.answerWrapper}>
       <div className={styles.answerLeft}>
-        <p>
+        <p className={styles.username}>
           {`${username}: `}
           {isAnswerYours && (
             <img
@@ -79,6 +79,7 @@ const AnswerCard = ({
           <img
             src={isAnswerLiked ? upVoteActiveImage.src : upVotePassiveImage.src}
             alt=""
+            className={styles.likeDislike}
             onClick={() => {
               likeUnlike();
             }}
@@ -87,7 +88,7 @@ const AnswerCard = ({
       </div>
       {isWarningShown && (
         <Modal
-          message={"Are you sure you want to delete this"}
+          message={"Are you sure you want to delete this?"}
           onCancel={() => {
             setWarningShown(false);
           }}

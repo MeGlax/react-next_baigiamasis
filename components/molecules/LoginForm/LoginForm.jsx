@@ -49,20 +49,27 @@ const LoginForm = () => {
   };
   return (
     <div className={styles.main}>
-      <input
-        type="text"
-        placeholder="email"
-        onChange={(event) => {
-          setEmail(event.target.value);
-        }}
-      />
-      <input
-        type="password"
-        placeholder="password"
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
-      />
+      <h3>Login</h3>
+      <div className={styles.emailWrapper}>
+        <p>Email:</p>
+        <input
+          type="text"
+          placeholder="email"
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+        />
+      </div>
+      <div className={styles.passwordWrapper}>
+        <p>password:</p>
+        <input
+          type="password"
+          placeholder="password"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />
+      </div>
       <Button
         onPushed={() => {
           onLogin();

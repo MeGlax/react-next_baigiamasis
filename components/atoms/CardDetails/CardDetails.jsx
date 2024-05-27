@@ -5,7 +5,7 @@ import { getUsernameById } from "../../../api/user";
 const CardDetails = ({ date, answersAmount, asker_id }) => {
   // apkarpau datą
   const dateArray = date.split(" ");
-  const newDate = `${dateArray[3]} ${dateArray[1]} ${dateArray[2]}. ${dateArray[4]}`;
+  const newDate = `${dateArray[1]} ${dateArray[2]}, ${dateArray[3]}`;
   //
   // gautą id įdedu į funkciją, kuri par'fetch'ina ir return'ina username'ą, kurį set'inu ir panaudoju kortelėje
   const [username, setUsername] = useState("anonymous");

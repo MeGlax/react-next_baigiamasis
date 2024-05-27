@@ -5,6 +5,10 @@
 }
 .desktopMain ul li {
   cursor: pointer;
+  text-transform: capitalize;
+}
+.desktopMain ul li:hover {
+  color: var(--background-color);
 }
 .pointer {
   cursor: pointer !important;
@@ -15,7 +19,7 @@
 }
 .mobileMain {
   position: fixed;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   height: 100%;
   width: 100%;
   top: 0;
@@ -32,6 +36,12 @@
   align-items: center;
   gap: 2rem;
   margin-top: 20%;
+}
+.mobileMain ul li {
+  background-color: var(--secondary-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-transform: capitalize;
 }
 
 .burgerIcon {

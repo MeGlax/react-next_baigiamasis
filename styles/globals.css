@@ -16,3 +16,6 @@ a {
   all: unset;
   cursor: pointer;
 }
+body {
+  background: url("../assets/background.jpg");
+}

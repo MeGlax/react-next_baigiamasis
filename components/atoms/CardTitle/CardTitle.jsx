@@ -23,7 +23,10 @@ const CardTitle = ({ title, question_id, asker_id, refreshQuestions }) => {
 
   return (
     <div>
-      <Link href={`question/${question_id}`}>{`${title} `}</Link>
+      <Link
+        href={`question/${question_id}`}
+        className={styles.title}
+      >{`${title} `}</Link>
       {isQuestionYours && (
         <img
           src={deleteImg.src}

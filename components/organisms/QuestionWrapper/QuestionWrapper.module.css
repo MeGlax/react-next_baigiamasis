@@ -1,0 +1,27 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.questionWrapper {
+  background-color: var(--secondary-color);
+  padding: 5px 16px;
+  border-radius: 5px;
+  font-size: 24px;
+}
+.questionDetailsWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 1rem;
+}
+.answersWrapper {
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 15px 0px;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

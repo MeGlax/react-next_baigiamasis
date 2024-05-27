@@ -49,27 +49,37 @@ const LoginForm = () => {
   };
   return (
     <div className={styles.main}>
-      <input
-        type="text"
-        placeholder="username"
-        onChange={(event) => {
-          setUsername(event.target.value);
-        }}
-      />
-      <input
-        type="text"
-        placeholder="email"
-        onChange={(event) => {
-          setEmail(event.target.value);
-        }}
-      />
-      <input
-        type="password"
-        placeholder="password"
-        onChange={(event) => {
-          setPassword(event.target.value);
-        }}
-      />
+      <h3>Register</h3>
+      <div className={styles.usernameWrapper}>
+        <p>username:</p>
+        <input
+          type="text"
+          placeholder="username"
+          onChange={(event) => {
+            setUsername(event.target.value);
+          }}
+        />
+      </div>
+      <div className={styles.usernameWrapper}>
+        <p>email:</p>
+        <input
+          type="text"
+          placeholder="email"
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+        />
+      </div>
+      <div className={styles.usernameWrapper}>
+        <p>password:</p>
+        <input
+          type="password"
+          placeholder="password"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />
+      </div>
       <Button
         onPushed={() => {
           onLogin();
@@ -78,7 +88,9 @@ const LoginForm = () => {
       />
       {isLoading && <Spinner />}
       {isError && <div className={styles.error}>Please fill in all fields</div>}
-      {isBadData && <div className={styles.error}>Error happened</div>}
+      {isBadData && (
+        <div className={styles.error}>Please fill in a valid email</div>
+      )}
     </div>
   );
 };
